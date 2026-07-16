@@ -15,10 +15,10 @@ set -e
 set -x
 
 # Make output directorie
-mkdir -p out_dir_resampling
+mkdir -p out_dir
 
 # Run the actual python code
-singularity exec docker://brainlife/mne:0.23dev python3 resampling.py
+singularity exec docker://brainlife/mne:0.23dev python3 main.py
 
 # Delete the bids folder if it exists
 if [ -d bids ]
