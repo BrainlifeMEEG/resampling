@@ -10,12 +10,8 @@
 #
 # Author: Franco Pestilli
 
-
 set -e
 set -x
-
-# Make output directorie
-mkdir -p out_dir
 
 # Run the actual python code
 singularity exec docker://brainlifemeeg/mne:1.12.1 python3 main.py
